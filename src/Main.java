@@ -45,7 +45,13 @@ public class Main {
         falcon.toFly();
 
 
+        System.out.println("----------------------------------");
+        System.out.println(giraffe.equals(gazelle));
+        System.out.println(giraffe.getClass());
+
+
     }
+
 
 
 }

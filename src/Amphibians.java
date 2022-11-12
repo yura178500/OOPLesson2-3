@@ -1,9 +1,9 @@
-public class Amphibians extends Animals{
+public class Amphibians extends Animals {
     @Override
     public String toString() {
         return "Amphibians{" +
                 "livingEnvironment='" + livingEnvironment + '\'' +
-                ", animalNickname='" + animalNickname + '\'' +
+                ", animalNickname='" + getAnimalNickname() + '\'' +
                 ", numberOfYears=" + numberOfYears +
                 '}';
     }
@@ -31,7 +31,7 @@ public class Amphibians extends Animals{
 
     public Amphibians(String animalNickname, int numberOfYears, String livingEnvironment) {
         super(animalNickname, numberOfYears);
-        if (livingEnvironment !=null|| livingEnvironment.isEmpty()) {
+        if (livingEnvironment != null || livingEnvironment.isEmpty()) {
             this.livingEnvironment = livingEnvironment;
         }
     }
@@ -43,6 +43,7 @@ public class Amphibians extends Animals{
     public void setLivingEnvironment(String livingEnvironment) {
         this.livingEnvironment = livingEnvironment;
     }
+
     public void hunt() {
         System.out.println("на охоте");
     }

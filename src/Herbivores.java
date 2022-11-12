@@ -1,4 +1,4 @@
-public class Herbivores extends Mammals{
+public class Herbivores extends Mammals {
 
     public void toEat() {
         super.toEat();
@@ -22,7 +22,7 @@ public class Herbivores extends Mammals{
                 "typeOfFood='" + typeOfFood + '\'' +
                 ", livingEnvironment='" + livingEnvironment + '\'' +
                 ", movementSpeed=" + movementSpeed +
-                ", animalNickname='" + animalNickname + '\'' +
+                ", animalNickname='" + getAnimalNickname() + '\'' +
                 ", numberOfYears=" + numberOfYears +
                 '}';
     }
@@ -48,6 +48,7 @@ public class Herbivores extends Mammals{
     public void setTypeOfFood(String typeOfFood) {
         this.typeOfFood = typeOfFood;
     }
+
     public void graze() {
         System.out.println("Нужно пастись");
 

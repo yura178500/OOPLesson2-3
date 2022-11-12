@@ -1,4 +1,4 @@
-public class Predators extends Mammals{
+public class Predators extends Mammals {
 
     public void toEat() {
         super.toEat();
@@ -30,7 +30,7 @@ public class Predators extends Mammals{
                 "typeOfFood='" + typeOfFood + '\'' +
                 ", livingEnvironment='" + livingEnvironment + '\'' +
                 ", movementSpeed=" + movementSpeed +
-                ", animalNickname='" + animalNickname + '\'' +
+                ", animalNickname='" + getAnimalNickname() + '\'' +
                 ", numberOfYears=" + numberOfYears +
                 '}';
     }
@@ -48,6 +48,7 @@ public class Predators extends Mammals{
             this.typeOfFood = typeOfFood;
         }
     }
+
     public void hunt() {
         System.out.println("на охоте");
     }

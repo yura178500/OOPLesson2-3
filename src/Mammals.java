@@ -1,5 +1,19 @@
+import java.util.Objects;
+
 public class Mammals extends Animals {
 
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Mammals mammals = (Mammals) o;
+        return Double.compare(mammals.movementSpeed, movementSpeed) == 0 && Objects.equals(livingEnvironment, mammals.livingEnvironment);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), livingEnvironment, movementSpeed);
+    }
 
     public void toEat() {
         super.toEat();
@@ -48,8 +62,9 @@ public class Mammals extends Animals {
     public Mammals(String animalNickname, int numberOfYears) {
         super(animalNickname, numberOfYears);
     }
+
     public void walk() {
         System.out.println("Надо погулять");
-         }
+    }
 
 }

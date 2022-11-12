@@ -1,6 +1,16 @@
 public class Flying extends Birds {
     public String typeOfMovement;
 
+
+    public String toString() {
+        return "Flying{" +
+                "typeOfMovement='" + typeOfMovement + '\'' +
+                ", livingEnvironment='" + livingEnvironment + '\'' +
+                ", animalNickname='" + getAnimalNickname() + '\'' +
+                ", numberOfYears=" + numberOfYears +
+                '}';
+    }
+
     public Flying(String animalNickname, int numberOfYears, String livingEnvironment, String typeOfMovement) {
         super(animalNickname, numberOfYears, livingEnvironment);
         if (typeOfMovement != null || typeOfMovement.isEmpty() ) {

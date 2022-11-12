@@ -1,19 +1,20 @@
 import java.util.Objects;
 
-public  class Animals {
-    public  String animalNickname;
+public class Animals {
+    private String animalNickname;
     public int numberOfYears;
 
+
     public Animals(String animalNickname, int numberOfYears) {
-        if (animalNickname !=null || animalNickname.isEmpty()) {
+        if (animalNickname != null || animalNickname.isEmpty()) {
             this.animalNickname = animalNickname;
         }
-        if (numberOfYears >= 0 ) {
-         this.numberOfYears = numberOfYears;
-            } else {
+        if (numberOfYears >= 0) {
+            this.numberOfYears = numberOfYears;
+        } else {
             this.numberOfYears = Math.abs(numberOfYears);
-            }
         }
+    }
 
     public String getAnimalNickname() {
         return animalNickname;
@@ -31,14 +32,16 @@ public  class Animals {
         this.numberOfYears = numberOfYears;
     }
 
-    public void toEat(){
+    public void toEat() {
         System.out.println("Покорми меня.");
 
     }
+
     public void sleep() {
         System.out.println("Хочу спать.");
 
     }
+
     public void movements() {
         System.out.println("Перемещается");
 
